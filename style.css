@@ -1,0 +1,56 @@
+body {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	font-family: Arial;
+	background-color: blue
+}
+
+h1 {
+	font-size: 80px;
+}
+
+.button{
+	margin-top: 160px;
+}
+
+
+.soccerResize {
+	width: 100%;
+	height: 33%;
+
+}
+
+.resize {
+	width: 100px;
+	height: auto;
+	padding-left: 20px;
+	margin-top: 30px
+}
+
+.resize {
+	width: 75px;
+	height: auto;
+}
+
+.wrapper {
+	background-color: #ffffff ;
+	height: 150%;
+	width: 50%
+
+}
+
+.sidebar{
+	width: 260px;
+	height: 700px;
+	float: right;
+	background-color: red
+}
+
+.footer {
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	background-color: white;
+}
+

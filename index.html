@@ -1,0 +1,71 @@
+<html ng-app="pickUpSoccer">
+<head>
+	<title>Soccer Pick-Up games</title>
+	<style>
+	body {
+		background-image: url("http://www.fullhdwpp.com/wp-content/uploads/Soccer-Field_www.FullHDWpp.com_.jpg");
+	}
+	</style>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="mainCtrl">
+	
+
+	<div class="header">
+		<h1>Pick Up Soccer</h1>
+			
+		<h3>Places to Play</h3>
+
+		<!--<img class="soccerResize" src="images/soccerField.jpg" /> -->
+	<div/>
+
+	<div class="wrapper">
+			<button class="main-button" ng-click="toggleAdd()">Add Location</button>
+			<button class="main-button" ng-click="toggleRemove()">Remove Location</button>
+			<button class="main-button" ng-click="toggleSearch()">Filter Location</button>
+		
+		<br>
+
+			<div class="add-location">
+				<input type='text' placeholder="Location" ng-model='location.text' ng-show="showAdd">
+				<input type='text' placeholder="City" ng-model='location.city' ng-show="showAdd">
+				<input type='text' placeholder="Time" ng-model='location.time' ng-show="showAdd">
+				<button ng-click="addLocation()" ng-show="showAdd">Submit</button>
+			</div>
+
+		
+			<div class="remove-location">
+				<input type='text' placeholder="Remove this location" ng-model='location.text' ng-show="showRemove">
+				<button ng-click="removeLocation()" ng-show="showRemove">Submit</button>
+			</div>
+
+
+			<div class="search-location">
+				<input type='text' placeholder="Search" ng-model='searchLocation' ng-show="showSearch">
+			</div>
+
+			<div ng-repeat='location in locations | filter: searchLocation'><p style="font-size: 24px">{{location.text}}</p> <p style="color: blue; font-size: 18px">{{location.city}}</p> <p style="color: red; font-size: 14px">{{location.time}}</p></div>
+	</div>
+
+	<div sidebar="this is where the chat should go">
+		<input type="text" placeholder="Search">
+		<input> living la vida loca
+	</div>
+
+</br>
+			
+
+	<div class="footer"> 
+			<img class="resize" src="images/twitter.png" />
+			<img class="resize" src="images/facebook.png" />
+			<img class="resize" src="images/brazuca.png" />
+	</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script type="text/javascript" src="angular-cookies.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="mainCtrl.js"></script>
+<script type="text/javascript" src="dataService.js"></script>
+</body>
+</html>
